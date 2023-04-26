@@ -64,7 +64,7 @@
     <div class="logo-container">
         <img src="./images/letter-r.png" alt="logo for my portfolio" on:click|preventDefault={() => document.body.scrollIntoView({
             behavior: "smooth"
-        })}/>
+        })} on:keyup={() => {}}/>
     </div>
     <ul>
         <li><h1><a href="#about" on:click|preventDefault={scrollIntoView}>about</a></h1></li>
