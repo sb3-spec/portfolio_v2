@@ -1,0 +1,80 @@
+:root {
+	--navy: #0a192f;
+	--light-navy: #112240;
+	--green: #64ffda;
+	--slate: #8892b0;
+	--light-slate: #ccd6f6;
+	--lightest-slate: #ccd6f6;
+	--white: #e6f1ff;
+	--navy-shadow: rgba(2,12,27,0.7);
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: var(--white);
+	background-color: var(--navy);
+	margin: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: var(--lightest-slate);
+	text-decoration: none;
+}
+
+a:hover {
+	transition: color 200ms ease-in-out;
+	color: var(--green);
+}
+
+
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+
+/* @media (max-width: 900px) {
+	p {
+		font-size: 55px !important;
+	}
+} */
