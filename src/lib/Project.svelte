@@ -118,11 +118,6 @@
         /* padding-bottom: 3em; */
     }
     
-    .project-image {
-        height: auto;
-        margin: 0 auto;
-        width: 100%;
-    }
 
     .project h2 {
         top: 0;
@@ -145,24 +140,7 @@
         height: 2px;
         background-color: var(--green);
     }
-
-
-    .project-image img {
-        width: 100%;
-        object-fit: scale-down;
-        height: 775px;
-        border-radius: 15px;
-    }
-
        
-
-    .project-image img:hover {
-        transition: z-index 300ms ease-in-out;
-        z-index: 10;
-        cursor: pointer;
-        position: relative;
-        margin: 0 auto;
-    }
 
     .project ul {
         text-align: left;
@@ -255,11 +233,11 @@
             display: block;
         }
 
-        .project-image img {
-            /* width: 130%;
-            left: -20%;
-            position: relative; */
+
+        .project-overview {
+            margin-bottom: 80px;
         }
+        
 
         .links img {
             width: 25px;
@@ -276,7 +254,7 @@
         }
 
         .project-header h2 {
-            font-size: 25px;
+            font-size: 23px;
         }
     }
 </style>

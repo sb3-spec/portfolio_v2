@@ -28,8 +28,8 @@
             </div>
         {/each}
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev btn"></div>
+    <div class="swiper-button-next btn"></div>
 </div>
 
 <style>
@@ -42,5 +42,17 @@
     img {
         object-fit: cover;
         width: 100%;
+    }
+
+    @media (max-width: 900px) {
+        img {
+            width: 85%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .btn {
+            display: none;
+        }
     }
 </style>
