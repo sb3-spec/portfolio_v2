@@ -46,9 +46,10 @@
 
     @media (max-width: 900px) {
         img {
-            width: 85%;
+            width: 80%;
             object-fit: cover;
             position: relative;
+            border-radius: 3px;
         }
 
         .btn {
