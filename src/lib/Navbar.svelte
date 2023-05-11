@@ -7,6 +7,8 @@
     var isScrolling;
     var isHovered;
 
+    var mobileMenuActive = false;
+
     function handleHover() {
         isHovered = true;
         scrollDir = "up";
@@ -15,6 +17,22 @@
     function handleMouseLeave() {
         isHovered = false;
     };
+
+    function handleClickHamburger() {
+        let nav = document.getElementById("nav-links");
+
+        mobileMenuActive = !mobileMenuActive;
+
+        if (mobileMenuActive) {
+            nav.style.left = "0";
+        } else {
+            nav.style.left = "100%";
+        }
+
+        
+
+        
+    }
     
     window.addEventListener('scroll', (e) => {
         newVal = -window.pageYOffset;
@@ -64,13 +82,13 @@
     <div class="logo-container">
         <img src="./images/letter-r.png" alt="logo for my portfolio" on:click|preventDefault={() => document.body.scrollIntoView({
             behavior: "smooth"
-        })}/>
+        })} on:keyup={() => {}}/>
     </div>
-    <ul>
+    <ul id="nav-links">
         <li><h1><a href="#about" on:click|preventDefault={scrollIntoView}>about</a></h1></li>
         <li><h1><a href="#projects" on:click|preventDefault={scrollIntoView}>projects</a></h1></li>
         <li><h1><a href="#contact" on:click|preventDefault={scrollIntoView}>contact</a></h1></li>
-        <li><a href="https://pdfhost.io/v/Y.0SzicBD_robertsheffieldresume" target="_blank"><button type="button"><h1 class='resume'>Resume</h1></button></a></li>
+        <li><h1><a href="https://pdfhost.io/v/Y.0SzicBD_robertsheffieldresume" target="_blank">resume</a></h1></li>
     </ul>
 </nav>
 
@@ -78,11 +96,33 @@
 <style>
     a {
         scroll-behavior: smooth;
+        font-size: 19px;
+        font-weight: 100;
     }
     :root {
         --navbar-content-offset: 22px;
     }
+
     
+    .mobile-menu-icon {
+        z-index: 30;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        position: static;
+        right: 0;
+    }
+
+
+    .mobile-menu-icon img {
+        width: 20px;
+        height: 20px;
+        left: 0;
+    }
 
 
     .navbar {
@@ -110,7 +150,6 @@
     .logo-container {
         position: relative;
         left: 40px;
-        top: var(--navbar-content-offset)
     }
     
     .logo-container img {
@@ -137,7 +176,6 @@
         justify-content: space-between;
         list-style: none;
         min-width: 450px;
-        top: var(--navbar-content-offset)
     }
 
     .navbar a:hover {
@@ -150,13 +188,14 @@
 
 
     .navbar h1 {
-        position: relative;
-        top: .5em;
         color: var(--light-slate);
         cursor: pointer;
         margin: 0;
         font-size: 19px;
         font-weight: 100;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .navbar h1:hover {
@@ -166,13 +205,15 @@
     }
 
 
-    .navbar button {
+    .resume-button {
         background: none;
         border-radius: 5px;
         border: 1px solid var(--green);
         color: var(--green);
         padding: .5em .8em;
         margin: 0;
+        font-size: 19px;
+        font-weight: 100;
     }
 
     .navbar button:hover {
@@ -185,15 +226,22 @@
     @media (max-width: 900px) {
         .navbar h1 {
             font-weight: 400;
+            
         }
 
         .logo-container img {
             display: none;
         }
 
+        .navbar {
+            height: 40px;
+        }
+
 
         .navbar li {
             margin: 0 5px;
+            font-size: 2px;
+            text-align: center;
         }
 
         .navbar ul {
@@ -201,6 +249,14 @@
             width: 100%;
             right: 0;
             padding: 0 .5em;
+            top: 0;
         }
+
+        .down {
+            transform: translateY(0);
+            box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        }
+
+
     }
 </style>
