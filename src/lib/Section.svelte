@@ -61,11 +61,13 @@
     }
 
     @media (max-width: 900px) {
+
         
 
         .section-container {
             min-width: 0;
             min-height: 0;
+            margin: 100px auto 0 auto;
         }
 
         .section-container h1 {

@@ -140,8 +140,7 @@
         height: 2px;
         background-color: var(--green);
     }
-
-
+       
 
     .project ul {
         text-align: left;
@@ -234,6 +233,12 @@
             display: block;
         }
 
+
+        .project-overview {
+            margin-bottom: 80px;
+        }
+        
+
         .links img {
             width: 25px;
             height: 25px;
@@ -249,7 +254,7 @@
         }
 
         .project-header h2 {
-            font-size: 25px;
+            font-size: 23px;
         }
     }
 </style>
