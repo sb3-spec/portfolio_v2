@@ -138,6 +138,7 @@
     .logo-container {
         position: relative;
         left: 40px;
+        
     }
     
     .logo-container img {
@@ -146,6 +147,9 @@
         width: 35px;
         height: 35px;
         border: 2px solid var(--green);
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .logo-container img:hover {
