@@ -24,7 +24,7 @@
     <div class="swiper-wrapper">
         {#each project.img as img}
             <div class="swiper-slide">
-                <img src={img} alt={project.title}>
+                <img src={img} alt={project.title} on:click={() => window.open(img)} on:keydown={() => window.open(img)}>
             </div>
         {/each}
     </div>
@@ -42,6 +42,8 @@
     img {
         object-fit: cover;
         width: 100%;
+        cursor: pointer;
+        
     }
 
     @media (max-width: 900px) {

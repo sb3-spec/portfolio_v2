@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 export const ProjectStore = writable([
     {
         title: 'The Carbon Platform Company',
-        img: ["./images/portfolio-projects/carbon_platform/the_carbon_platform_1.jpg"],
+        img: ["./images/portfolio-projects/carbon_platform/the_carbon_platform_1.jpg", "./images/portfolio-projects/carbon_platform/the_carbon_platform_2.jpg"],
         description: "I'm the lead fullstack software engineer and am responsible for the \
             development and maintenance of the entirety of the site. The front end \
             is built with Svelte and leverages Algolia to provide fast search indexing. \
@@ -64,37 +64,6 @@ export const ProjectStore = writable([
 
         
 
-    },
-    {
-        title: 'The Carbon Platform Company',
-        img: ["./images/portfolio-projects/carbon_platform/the_carbon_platform_1.jpg"],
-        description: "I'm the lead fullstack software engineer and am responsible for the \
-            development and maintenance of the entirety of the site. The front end \
-            is built with Svelte and leverages Algolia to provide fast search indexing. \
-            The back end is powered by a Django server and PostgreSQL database, which are \
-            hosted on Railway and AWS, respectively.",
-        keyInfo: {
-            "Hurdles": "The biggest issue that I faced was slow server response times. The culprit was a combination of inefficent SQL queries \
-            and unnecessary calls to the server.",
-            "Solutions":
-                "One of the measures I took to reduce database query times was to cap the amount of data the server would send for different components.\
-                In the future, setting up a database pool connection would also reduce load times, as opening the database for every query is expensive.",
-        },
-        features: [
-            "Instant search/auto-complete through Algolia",
-            "Calculate your carbon footprint and find products that would help lower your carbon footprint", 
-            "Find articles and blogs that would help reduce your carbon footprint"
-        ],
-        tech: [
-            "Svelte", "Django", "AWS", "Algolia", "Postgres"
-        ],
-        liveLink: '',
-        githubLinks: {
-            client: 'https://github.com/sb3-spec/eco-marketplace-web_client-v1',
-            server: 'https://github.com/sb3-spec/eco-marketplace-backend-v1'
-        }
-
-        
     },
     {
         title: 'Tutoring Log v2',

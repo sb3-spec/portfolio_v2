@@ -11,7 +11,7 @@
 <Section title={"Contact"} id={"contact"} className="contact">
     <div class="contact">
         <a href="https://www.linkedin.com/in/robert-sheffield-a119a9140/" target="_blank" title="LinkedIn Profile"><h3>LinkedIn</h3></a>
-        <h3 on:click={handleCopy}>Email</h3>
+        <h3 on:click={handleCopy} on:keydown={handleCopy}>Email</h3>
     </div>
 </Section>
 
