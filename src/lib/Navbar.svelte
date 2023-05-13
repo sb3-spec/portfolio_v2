@@ -59,7 +59,13 @@
         el.scrollIntoView({
             behavior: 'smooth'
         });
-        window.scrollBy(0, -20);
+
+        
+        
+        if (window.innerWidth <= 900) {
+            window.scrollBy(0, -20);
+
+        }
     }
 </script>
 
@@ -208,20 +214,13 @@
         font-weight: 100;
     }
 
-    .navbar button:hover {
-        color: var(--green);
-        background-color: rgba(100 255 218 / .1);
-        transition: all 200ms linear;
-        cursor: pointer;
-    }
-
     @media (max-width: 900px) {
         .navbar h1 {
             font-weight: 400;
             
         }
 
-        .logo-container img {
+        .logo-container {
             display: none;
         }
 
