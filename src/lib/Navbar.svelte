@@ -18,21 +18,6 @@
         isHovered = false;
     };
 
-    function handleClickHamburger() {
-        let nav = document.getElementById("nav-links");
-
-        mobileMenuActive = !mobileMenuActive;
-
-        if (mobileMenuActive) {
-            nav.style.left = "0";
-        } else {
-            nav.style.left = "100%";
-        }
-
-        
-
-        
-    }
     
     window.addEventListener('scroll', (e) => {
         newVal = -window.pageYOffset;
@@ -74,6 +59,7 @@
         el.scrollIntoView({
             behavior: 'smooth'
         });
+        window.scrollBy(0, -20);
     }
 </script>
 
@@ -82,7 +68,9 @@
     <div class="logo-container">
         <img src="./images/letter-r.png" alt="logo for my portfolio" on:click|preventDefault={() => document.body.scrollIntoView({
             behavior: "smooth"
-        })} on:keyup={() => {}}/>
+        })} on:keydown|preventDefault={() => document.body.scrollIntoView({
+            behavior: "smooth"
+        })}/>
     </div>
     <ul id="nav-links">
         <li><h1><a href="#about" on:click|preventDefault={scrollIntoView}>about</a></h1></li>
@@ -150,6 +138,7 @@
     .logo-container {
         position: relative;
         left: 40px;
+        
     }
     
     .logo-container img {
@@ -158,6 +147,9 @@
         width: 35px;
         height: 35px;
         border: 2px solid var(--green);
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .logo-container img:hover {

@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 export const ProjectStore = writable([
     {
         title: 'The Carbon Platform Company',
-        img: ["./images/portfolio-projects/carbon_platform/the_carbon_platform_1.jpg"],
+        img: ["./images/portfolio-projects/carbon_platform/the_carbon_platform_1.jpg", "./images/portfolio-projects/carbon_platform/the_carbon_platform_2.jpg"],
         description: "I'm the lead fullstack software engineer and am responsible for the \
             development and maintenance of the entirety of the site. The front end \
             is built with Svelte and leverages Algolia to provide fast search indexing. \
@@ -65,7 +65,6 @@ export const ProjectStore = writable([
         
 
     },
-    
     {
         title: 'Tutoring Log v2',
         img: ["./images/portfolio-projects/tutoring-portal-2/dashboard.jpg"],
