@@ -56,21 +56,32 @@
         const el = document.querySelector(target.getAttribute('href'));
 
         if (!el) {return;}
-        el.scrollIntoView({
-            behavior: 'smooth'
-        });
+        // el.scrollIntoView({
+        //     behavior: 'smooth'
+        // });
+        let diff = el.getBoundingClientRect().top;
+        // console.log(`Element pos: ${el.getBoundingClientRect().top}`)
 
-        
-        
         if (window.innerWidth <= 900) {
-            window.scrollBy(0, -20);
-
+            diff -= 20;
         }
+
+        window.scrollBy({
+            top: diff,
+            left: 0,
+            behavior: 'smooth'
+        })
+
+        // console.log(`Window scrollY: ${window.scrollY}`)
+
+        
+        
+        
     }
 </script>
 
 
-<nav class={`navbar ${scrollDir}`} on:mouseover={handleHover} on:focus={() => {console.log("were focused")}} on:mouseleave|preventDefault={handleMouseLeave}>
+<nav class={`navbar ${scrollDir}`} on:mouseover={handleHover} on:focus={handleHover} on:mouseleave|preventDefault={handleMouseLeave}>
     <div class="logo-container">
         <img src="./images/letter-r.png" alt="logo for my portfolio" on:click|preventDefault={() => document.body.scrollIntoView({
             behavior: "smooth"
