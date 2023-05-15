@@ -63,7 +63,7 @@
         // console.log(`Element pos: ${el.getBoundingClientRect().top}`)
 
         if (window.innerWidth <= 900) {
-            diff -= 20;
+            diff -= 40;
         }
 
         window.scrollBy({

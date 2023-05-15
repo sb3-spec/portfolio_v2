@@ -34,7 +34,7 @@
             {/each} -->
             <div class="features list-container">
                 <h3>Features</h3>
-                <ul>
+                <ul class="features-list">
                     {#each project.features as feature}
                         <li><p>{feature}</p></li>
                     {/each}
@@ -42,7 +42,7 @@
             </div>
             <div class="tech list-container">
                 <h3>Tech:</h3>
-                <ul>
+                <ul class="tech-list">
                     {#each project.tech as tech}
                         <li>
                             <p>
@@ -99,6 +99,23 @@
 
     }
 
+    .tech-list li {
+        list-style: none;
+        display: flex;
+    }
+
+    .tech-list li p::before, .features-list li p::before {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: var(--green);
+        border-radius: 50%;
+        margin: 0;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
 
 
 
@@ -144,6 +161,7 @@
 
     .project ul {
         text-align: left;
+        list-style: none;
     }
 
     /* .project-image::before {
@@ -157,8 +175,7 @@
     .project p {
         color: var(--slate);
         font-size: 1.25em;
-        display: flex;
-        justify-content: flex-start;
+        display: block;
 
         /* text-align: left; */
     }
