@@ -59,12 +59,6 @@
 <style>
     .swiper-outer {
         position: relative;
-        overflow-y: visible !important;
-    }
-
-
-    .swiper-pagination {
-        transform: translateY(0px);
     }
 
 
@@ -87,9 +81,10 @@
             border-radius: 3px;
         }
 
-        .btn {
+
+        /* .btn {
             display: none;
-        }
+        } */
 
         .swiper-pagination {
             transform: translateY(2px);
