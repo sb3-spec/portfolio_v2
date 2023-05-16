@@ -66,9 +66,9 @@
         min-height: 30vh;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
         position: relative;
         margin-bottom: 10%;
+        overflow-y: visible;
     }
 
     .project-header {
@@ -273,6 +273,8 @@
         .project-header h2 {
             font-size: 23px;
         }
+
+        
     }
 </style>
 

@@ -126,8 +126,7 @@ export const ProjectStore = writable([
     {
         title: 'Twitter Clone',
         img: ["./images/portfolio-projects/twitter_clone/twitter_clone_home.jpg", 
-         "./images/portfolio-projects/twitter_clone/twitter_clone_profile.jpg", 
-         "./images/portfolio-projects/twitter_clone_search.jpg"],
+         "./images/portfolio-projects/twitter_clone/twitter_clone_profile.jpg"],
         description: "Twitter clone i built.",
         keyInfo: {
             "Hurdles": "I was confused on how to handle the user's authentication state \
