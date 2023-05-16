@@ -38,14 +38,30 @@
     }
 
     .skills li {
-        max-width: 10ch;
-        display: list-item;
+        list-style-type: none;
         font-weight: 100;
+        display: flex;
+        justify-content: space-between;
     }
 
     .skills li p {
         color: var(--lightest-slate);
+        margin: 0;
+        width: 15ch
     }
+
+    .skills li p::before {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: var(--green);
+        border-radius: 50%;
+        margin: 0;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
 
     @media (max-width: 900px) {
         .skills p {
@@ -55,5 +71,12 @@
         .skills ul {
             width: 80%;
         }
+
+        .skills li p {
+            color: var(--lightest-slate);
+            margin: 0;  
+        }
+
+        
     }
 </style>
