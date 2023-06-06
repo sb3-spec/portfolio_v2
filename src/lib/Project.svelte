@@ -20,7 +20,7 @@
                     <a href={project.githubLinks.server} title="Backend" target="_blank"><img src="./images/github.png" alt="" /></a>
                 {/if}
                 {#if project.liveLink}
-                    <a href={project.link} title="To Site" target="_blank"><img src="./images/link.png" alt="" /></a>
+                    <a href={project.liveLink} title="To Site" target="_blank"><img src="./images/link.png" alt="" /></a>
                 {/if}
             </div>
         </div>
