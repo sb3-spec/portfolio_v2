@@ -61,43 +61,13 @@ export const ProjectStore = writable([
       "Firebase authentication",
       "Create and view custom recipes",
     ],
-    tech: ["Svelte", "Rust", "Docker", "Firebase", "Postgres"],
-    liveLink: "https://digital-cookbook.netlify.app/",
+    tech: ["Svelte", "Rust", "GCP", "Docker", "Firebase", "Postgres"],
+    liveLink: "https://digital-parsley.netlify.app/",
     githubLinks: {
       client: "https://github.com/sb3-spec/cookbook-web-client",
       server: "https://github.com/sb3-spec/cookbook_api",
     },
   },
-  //   {
-  //     title: "Digital Cookbook",
-  //     img: [
-  //       "./images/portfolio-projects/digital_cookbook/login.jpg",
-  //       "./images/portfolio-projects/digital_cookbook/dashboard.jpg",
-  //       "./images/portfolio-projects/digital_cookbook/recipe-large.jpg",
-  //       "./images/portfolio-projects/digital_cookbook/new_recipe.jpg",
-  //     ],
-  //     description:
-  //       "This is a full-stack web application I made to help keep track of the different recipes I use. \
-  //             When cooking, I often had to sift through cooking articles to get to the recipe at the bottom. This application serves \
-  //             to hold all the recipes you need in a centralized location. \
-  //             The back end is powered by a Rust server and PostgreSQL database, which are \
-  //             hosted on Railway using a Docker Image.",
-  //     keyInfo: {
-  //       Hurdles:
-  //         "The hardest part of this project was writing the JavaScript logic for handling the addition of new steps and ingredients to the new recipe form. \
-  //                 I needed to make sure that I was able to capture all of the added input fields and format them for processing on the backend. ",
-  //       Solutions:
-  //         "The only thing I needed to solve the problem was time, and I know feel much more confident in my ability to produce highly complex client side applications.\
-  //                 ",
-  //     },
-  //     features: ["Firebase authentication", "Create and view custom recipes"],
-  //     tech: ["Svelte", "Rust", "Docker", "Firebase", "Postgres"],
-  //     liveLink: "https://digital-cookbook.netlify.app/",
-  //     githubLinks: {
-  //       client: "https://github.com/sb3-spec/cookbook-web-client",
-  //       server: "https://github.com/sb3-spec/cookbook_api",
-  //     },
-  //   },
   {
     title: "Tutoring Log v2",
     img: ["./images/portfolio-projects/tutoring-portal-2/dashboard.jpg"],
@@ -118,7 +88,7 @@ export const ProjectStore = writable([
       "Search sessions by month and year",
     ],
     tech: ["Svelte", "Express", "Postgres"],
-    liveLink: "https://superlative-sundae-a5ee1c.netlify.app/",
+    liveLink: "",
     githubLinks: {
       client: "https://github.com/sb3-spec/tutoring-portal-2-client",
       server: "https://github.com/sb3-spec/tutoring-portal-backend",
